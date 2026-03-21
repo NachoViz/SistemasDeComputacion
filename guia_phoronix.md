@@ -1,0 +1,26 @@
+# Guía de Phoronix Test Suite: Benchmark de CPU en Linux
+
+Esta guía explica cómo instalar y ejecutar el test de compilación del kernel de Linux usando Phoronix Test Suite. Es una prueba de estrés puro para el procesador (CPU).
+
+## ⚠️ Advertencias Previas
+- **No ejecutar mientras se trabaja:** Esta prueba pone el uso de la CPU al **100%**. La PC se pondrá lenta y puede trabarse si tienes otras aplicaciones pesadas abiertas.
+- **Temperatura:** Es normal que los ventiladores suenen fuerte y la PC levante temperatura (especialmente en notebooks).
+
+## Paso 1: Instalación de dependencias
+Abre la terminal y ejecuta el siguiente comando para descargar el software de benchmarking y las herramientas de compilación de C/C++ necesarias:
+
+sudo apt update
+sudo apt install phoronix-test-suite build-essential
+
+## Paso 2: Ejecutar el Test
+Para iniciar la prueba específica de compilación del kernel, ejecuta:
+
+phoronix-test-suite benchmark build-linux-kernel
+
+### Durante la configuración inicial del test:
+1. El programa puede hacerte preguntas sobre aceptar términos o compartir resultados anónimos (puedes responder `n` a todo).
+2. Te preguntará qué configuración del kernel usar: elige la opción por defecto (`defconfig`).
+
+## Paso 3: Resultados
+La prueba descargará el código fuente y comenzará a compilar. Cuando termine, el resultado se mostrará en **segundos**. 
+- **Regla de oro:** En este benchmark, *Lower is Better* (menos tiempo significa un procesador más potente).
