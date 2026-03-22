@@ -4,6 +4,7 @@ Este comando se utiliza en retos de *hacking* (Capture The Flag) para compilar c
 
 **Comando completo:**
 `gcc -m32 -no-pie -fno-stack-protector -ggdb -mpreferred-stack-boundary=2 -z execstack -o stack1 stack1.c`
+ `objdump -M intel -S stack1´ 
 
 ---
 
