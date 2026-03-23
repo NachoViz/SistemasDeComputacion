@@ -27,6 +27,9 @@ Se midió el tiempo de ejecución utilizando la función `millis()` y se repiti�
 
 ## Resultados
 
+<img src="https://github.com/user-attachments/assets/bf45e428-d217-4e37-84c4-1be5ba0dcff6" width="300">
+
+
 | Frecuencia | Tiempo (int) | Tiempo (float) |
 |----------|-------------|---------------|
 | 80 MHz   | 9.88 s      | 11.68 s       |
