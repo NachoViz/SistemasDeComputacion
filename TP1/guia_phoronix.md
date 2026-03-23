@@ -11,6 +11,18 @@ Abre la terminal y ejecuta el siguiente comando para descargar el software de be
 
 sudo apt update
 wget https://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_10.8.4_all.deb
+SINO FUNCIONA 
+sudo apt install ./phoronix-test-suite_10.8.4_all.deb
+
+SINO MOVER TODO A TMP
+### Movemos el archivo a una zona neutral
+cp /home/nacho/phoronix-test-suite_10.8.4_all.deb /tmp/
+
+### Instalamos desde ahí
+sudo apt install /tmp/phoronix-test-suite_10.8.4_all.deb
+
+### Preguntamos la version
+phoronix-test-suite version
 _____________
 sudo apt update
 sudo apt install build-essential php-cli php-xml
