@@ -14,6 +14,8 @@ wget https://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-tes
 _____________
 sudo apt update
 sudo apt install build-essential php-cli php-xml
+___________________
+sudo apt install libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
 
 ## Paso 2: Ejecutar el Test
 Para iniciar la prueba específica de compilación del kernel, ejecuta:
