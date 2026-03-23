@@ -1,35 +1,43 @@
 #include <Arduino.h>
 
-// Usamos 'volatile' para forzar a la CPU a hacer las cuentas y evitar 
-// que el compilador optimice y borre los bucles mágicamente.
 volatile int sumaInt = 0;
 volatile float sumaFloat = 0.0;
 
-// Cantidad de repeticiones (ajústalo si tarda mucho o muy poco)
-const long ITERACIONES = 50000000; 
+// Cantidad de repeticiones
+const long ITERACIONES = 70000000; 
 
 void ejecutarPruebas() {
+  Serial.println("\n===================================");
   Serial.print("Frecuencia actual de la CPU: ");
   Serial.print(getCpuFrequencyMhz());
   Serial.println(" MHz");
-  Serial.println("-----------------------------------");
+  Serial.println("===================================");
 
   // --- PRUEBA 1: ENTEROS ---
-  Serial.println("Iniciando prueba con Enteros (int)...");
-  unsigned long tiempoInicio = millis(); // Anotamos el tiempo de inicio
+  sumaInt = 0; 
+  Serial.println("\n[PRUEBA ENTEROS]");
+  Serial.println("Realizando sumas de enteros...");
+
+  unsigned long tiempoInicio = millis();
   
   for (long i = 0; i < ITERACIONES; i++) {
     sumaInt += 1;
   }
   
-  unsigned long tiempoFin = millis(); // Anotamos el tiempo final
+  unsigned long tiempoFin = millis(); 
   float segundosInt = (tiempoFin - tiempoInicio) / 1000.0;
-  Serial.print("Tiempo (Int): ");
+
+  Serial.print("Resultado final (int): ");
+  Serial.println(sumaInt);
+  Serial.print("Tiempo de ejecucion (int): ");
   Serial.print(segundosInt);
-  Serial.println(" segundos\n");
+  Serial.println(" segundos");
 
   // --- PRUEBA 2: FLOTANTES ---
-  Serial.println("Iniciando prueba con Flotantes (float)...");
+  sumaFloat = 0; // Reset
+  Serial.println("\n[PRUEBA FLOTANTES]");
+  Serial.println("Realizando sumas de numeros flotantes...");
+
   tiempoInicio = millis();
   
   for (long i = 0; i < ITERACIONES; i++) {
@@ -38,28 +46,36 @@ void ejecutarPruebas() {
   
   tiempoFin = millis();
   float segundosFloat = (tiempoFin - tiempoInicio) / 1000.0;
-  Serial.print("Tiempo (Float): ");
+
+  Serial.print("Resultado final (float): ");
+  Serial.println(sumaFloat);
+  Serial.print("Tiempo de ejecucion (float): ");
   Serial.print(segundosFloat);
-  Serial.println(" segundos\n\n");
+  Serial.println(" segundos");
+
+  Serial.println("\n-----------------------------------");
+  Serial.println("Fin de pruebas para esta frecuencia");
+  Serial.println("-----------------------------------\n");
 }
 
 void setup() {
-  Serial.begin(115200); // Recordá poner el Monitor Serie a esta velocidad
-  delay(3000); // Damos unos segundos para abrir el Monitor Serie
+  Serial.begin(115200);
+  delay(3000);
 
   Serial.println("=== INICIANDO EXPERIMENTO ===");
+  Serial.println("Se evaluara el tiempo de ejecucion con distintas frecuencias de CPU\n");
 
-  // Configuramos la CPU a 80 MHz y probamos
+  // Frecuencia base 80 MHz
+  Serial.println(">>> Configurando CPU a 80 MHz...");
   setCpuFrequencyMhz(80);
   ejecutarPruebas();
 
-  // Duplicamos la frecuencia a 160 MHz y probamos de nuevo
+  // Duplicamos la frecuencia a 160 MHz
+  Serial.println(">>> Configurando CPU a 160 MHz...");
   setCpuFrequencyMhz(160);
   ejecutarPruebas();
-  
+
   Serial.println("=== EXPERIMENTO FINALIZADO ===");
 }
 
-void loop() {
-  // Dejamos el loop vacío porque el experimento ya se corrió en el setup
-}
+void loop() {}
