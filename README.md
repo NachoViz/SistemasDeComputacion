@@ -115,6 +115,8 @@ Intel Core i5-13600K (base)
 AMD Ryzen 9 5900X 12-Core
 Cual es la aceleración cuando usamos un AMD Ryzen 9 7950X 16-Core, cual de ellos hace un uso más eficiente de la cantidad de núcleos que tiene? y cuál es más eficiente en términos de costo (dinero y energía)  ?
 
+Respuestas en benchmarks.md
+
 ## **Ejercicio 3:**
 
 ### Profiling con gprof:
