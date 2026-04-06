@@ -1,0 +1,21 @@
+# 1 el archivo ejecutable (sin crar un archivo objeto intermedio)
+gcc -o stack1 stack1.c
+
+#2 el archivo objeto intermedio, es decir el programa en assembler:
+gcc -S -masm=intel -o stack1.s stack1.c.
+
+# Al compilar los binarios de los Abos es importante usar gcc con ciertas flags para simular la ausencia de mitigaciones y presentar los exploits más simples.
+
+# OBJDUMP
+#objdump es un desensamblador por línea de comandos que genera el 
+#código en assembler de un archivo ejecutable. Se usan desensambladores para
+# generar el código en assembler y comprender el funcionamiento de un binario.
+ 
+#Si el programa fue compilado con información de debugging (gcc -g...) sería 
+#posible ver el código fuente intercalado con: objdump -M intel -S suma
+
+## Debugger GDB
+#Se utiliza para debuggear el exploid -ggdb  -> gdb program
+#Existen herramientas similares = herramientas como Pwndbg, Dashbord GDB,
+#, Voltron u otros similares.
+
