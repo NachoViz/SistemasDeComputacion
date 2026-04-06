@@ -30,8 +30,8 @@ Para elegir un benchmark adecuado, es importante considerar las tareas que reali
 
 | Integrante | Tareas habituales | Benchmark representativo y justificación |
 |-----------|------------------|------------------------------------------|
-| Nacho (Ing. en Computación) | Programación en C/C++ y jugar al LoL | **Compilación del kernel de Linux / Geekbench**. La compilación representa bien la carga de trabajo al programar, mientras que Geekbench permite evaluar el rendimiento general del sistema y en múltiples núcleos, útil para aplicaciones exigentes. |
-| Sofi (Ing. en Computación) | Desarrollo de software, uso de entornos de programación y manejo de múltiples aplicaciones en simultáneo | **Geekbench**. Este benchmark mide el rendimiento general del sistema en tareas variadas, lo que lo hace representativo para uso multitarea y desarrollo. |
+| Sofi (Ing. en Computación) | Programación en C/C++ y jugar al LoL | **Compilación del kernel de Linux / Geekbench**. La compilación representa bien la carga de trabajo al programar, mientras que Geekbench permite evaluar el rendimiento general del sistema y en múltiples núcleos, útil para aplicaciones exigentes. |
+| Nacho (Ing. en Computación) | Desarrollo de software, uso de entornos de programación y manejo de múltiples aplicaciones en simultáneo | **Geekbench**. Este benchmark mide el rendimiento general del sistema en tareas variadas, lo que lo hace representativo para uso multitarea y desarrollo. |
 | Juli (Ing. Electrónica) | Simulación de circuitos (LTspice), análisis de señales y cálculos numéricos | **Linpack**. Este benchmark mide la capacidad de cálculo numérico del procesador, que es clave en simulaciones y análisis típicos de ingeniería electrónica. |
 
 De esta forma, se puede elegir el benchmark que mejor represente el uso real del sistema y obtener resultados más relevantes.
