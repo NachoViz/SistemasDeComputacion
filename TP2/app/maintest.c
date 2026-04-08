@@ -4,8 +4,8 @@
 // Función de prueba que simula al Assembler
 // Recibe el float, lo hace entero y le suma 1
 long procesar_gini_simulado(double valor) {
-    long entero = (long)valor; // Conversión de float a entero [cite: 25]
-    return entero + 1;         // Sumamos uno (+1) [cite: 25]
+    long entero = (long)valor; // Conversión de float a entero
+    return entero + 1;         // Sumamos uno (+1)
 }
 
 int main(int argc, char *argv[]) {
