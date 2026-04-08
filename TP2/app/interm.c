@@ -10,4 +10,9 @@ long puente_python_asm(double valor_gini) {
     long resultado = procesar_gini_asm(valor_gini);
     return resultado;
 }
-//n
+int main() {
+    double valor_test = 29.4;
+    long res = puente_python_asm(valor_test);
+    printf("Resultado: %ld\n", res);
+    return 0;
+}
