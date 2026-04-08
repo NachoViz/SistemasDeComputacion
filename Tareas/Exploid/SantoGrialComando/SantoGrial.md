@@ -12,6 +12,12 @@ Este comando se utiliza en retos de *hacking* (Capture The Flag) para compilar c
  (Executable and Linking Format). Con readelf -h es posible ver los campos de la cabecera del archivo, que nos dan información relevante del binario:
  `readelf -h programa` 
 
+ Despues si quiero usar GDB 
+ ´sudo apt update
+sudo apt install gdb
+
+git clone https://github.com/pwndbg/pwndbg 
+  cd pwndbg && ./setup.sh´
 ---
 
 ## Explicación bandera por bandera

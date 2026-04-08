@@ -10,7 +10,24 @@ Esta guía explica cómo instalar y ejecutar el test de compilación del kernel 
 Abre la terminal y ejecuta el siguiente comando para descargar el software de benchmarking y las herramientas de compilación de C/C++ necesarias:
 
 sudo apt update
-sudo apt install phoronix-test-suite build-essential
+wget https://phoronix-test-suite.com/releases/repo/pts.debian/files/phoronix-test-suite_10.8.4_all.deb
+SINO FUNCIONA 
+sudo apt install ./phoronix-test-suite_10.8.4_all.deb
+
+SINO MOVER TODO A TMP
+### Movemos el archivo a una zona neutral
+cp /home/nacho/phoronix-test-suite_10.8.4_all.deb /tmp/
+
+### Instalamos desde ahí
+sudo apt install /tmp/phoronix-test-suite_10.8.4_all.deb
+
+### Preguntamos la version
+phoronix-test-suite version
+_____________
+sudo apt update
+sudo apt install build-essential php-cli php-xml
+___________________
+sudo apt install libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf
 
 ## Paso 2: Ejecutar el Test
 Para iniciar la prueba específica de compilación del kernel, ejecuta:

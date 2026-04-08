@@ -1,0 +1,20 @@
+El microprocesador PENTIUM
+
+Posee 32 registros los cuales dedica 16 para el uso de PROGRAMADOR DE APLICACIONES y se clasifican en 4 grupos 
+
+8 Registros de proposito general (RPG)
+1 Registro de punteros de instrucciones (EIP)
+1 Registro de estado (EFLAGSS)
+6 Registros de Segmento (RS)
+
+
+INTEL incorporo en la arquitectura AI-32, la segmentacion como sistema principal de memoria. Son 6 zonas de memoria de longitud variable que contienen el mismo tipo de infromacion
+1_Segmento de codigo 
+2_Segmento de datos
+3_segmentos de pila
+4_5_6_Segmentos extra de datos
+
+En la segmentacion en MODO PROTEGIDO
+Al conjunto de parametros BASE = 2³², LIMITE = 2²⁰ y ATRIBUTOS = 2¹² se lo denomina DESCRIPTOR DE SEGMENTOS y tiene una longitud de 64 bits.
+Los descriptores de segmentos se guardan en la tabla de descriptores que residen
+en la memoria principal y son creadas y manejadas desde el SO.
