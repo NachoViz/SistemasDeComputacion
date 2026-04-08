@@ -10,3 +10,4 @@ long puente_python_asm(double valor_gini) {
     long resultado = procesar_gini_asm(valor_gini);
     return resultado;
 }
+//n
