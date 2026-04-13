@@ -123,3 +123,61 @@ Correr Python: python3 app.py
 
 
 # FALTA mostrar el estado del Stack en GDB.
+________________________________________________________________________________
+## 1. El Programa de Test (test_gdb.c)
+## 2. Compilación para Debug
+
+Es fundamental usar los flags que habilitan la información de depuración (-g):
+### 1. Ensamblar con símbolos de debug (formato dwarf)
+nasm -f elf64 -g -F dwarf procesar.asm -o procesar.o
+
+### 2. Compilar C con símbolos de debug
+gcc -g3 -c test_gdb.c -o test_gdb.o
+
+### 3. Linkear el ejecutable de prueba
+gcc -g3 -o test_gdb test_gdb.o procesar.o
+
+### 4. Sesión de GDB (Lo que tenés que mostrar)
+Iniciá el depurador:
+gdb ./test_gdb
+------------
+
+hay screen shot
+
+------------
+
+
+Dentro de GDB, ejecutá estos comandos en orden para mostrar el Stack Frame:
+
+Poner el breakpoint: break procesar_gini_asm
+
+Correr el programa: run (Se va a frenar justo al entrar a tu función ASM).
+
+Ver el código y los registros: * layout asm (Para ver las instrucciones).
+
+layout regs (Para ver los registros arriba).
+
+Inspeccionar el registro flotante:
+
+p $xmm0.v2_double
+
+Aquí les mostrás que el 29.4 entró por %xmm0.
+
+Ver el Stack antes del Prólogo:
+
+x/4gx $rsp (Muestra las primeras 4 posiciones de la pila).
+
+La primera posición es la dirección de retorno a C.
+
+Avanzar una instrucción (el push rbp): stepi
+
+Ver el Stack después del Prólogo:
+
+x/4gx $rsp
+
+Aquí les mostrás cómo el RBP viejo se guardó en el tope de la pila.
+///////////////////////////
+Conceptos Clave para la Defensa
+El Stack Frame: Explicá que push rbp y mov rbp, rsp crean el marco de la función actual. El %rsp se mueve para hacer lugar (si hiciera falta) y el %rbp queda como base fija para acceder a variables.
+
+La Convención: Si te preguntan por qué %xmm0, recordá decir: "Porque en x86-64, los doubles se pasan por registros XMM según la convención System V".
