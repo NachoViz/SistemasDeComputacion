@@ -28,6 +28,7 @@ Para Programador de Sistemas:
 
 ## Pentium 
 El Pentium dispone de 32 registros en su arquitectura interna de los cuales 16 son para uso del programador de aplicaciones y se clasifican en cuatro grupos:
+	
 	8 Registros de Proposito General (RPG)
 		- EAX -> Acumulador
 		- EBX -> Base
@@ -37,14 +38,17 @@ El Pentium dispone de 32 registros en su arquitectura interna de los cuales 16 s
 		- EBP -> Puntero de Base
 		- EDI -> Indice Destino
 		- ESI -> Indice Fuente
+
 	1 Registro Puntero de Instrucciones (EIP)
 		- EIP -> Puntero de Instrucciones = Gobierna implıcitamente el flujo de control de las instrucciones, las interrupciones y las excepciones.
 				-> DOS MODOS:
 					PROTEGIDO: 32bits - Maximo desplazamiento 4GB
 					NATIVO: 16bits - Maximo desplazamiento 64KB
+	
 	1 Registro de Estado (o de Senializadores) (EFLAGS)
 		- EFLAGS
 			-> 32BITS - Controlados por ALU 
+	
 	6 Registros de Segmento (RS)
 		- CS: Contiene en cada momento el segmento de c ́odigo que est ́a ejecutando la CPU. El desplazamiento que hay que añadir a la base del CS reside en el EIP.
 		- DS: Soporta el valor del selector del segmento de datos
