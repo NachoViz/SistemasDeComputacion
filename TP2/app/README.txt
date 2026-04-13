@@ -142,7 +142,7 @@ Iniciá el depurador:
 gdb ./test_gdb
 ------------
 
-hay screen shot
+<img width="1477" height="490" alt="Image" src="https://github.com/user-attachments/assets/c2e317a9-95b7-4e94-bbbb-b94b7c0bf5f3" />
 
 ------------
 
@@ -157,11 +157,17 @@ Ver el código y los registros: * layout asm (Para ver las instrucciones).
 
 layout regs (Para ver los registros arriba).
 
+<img width="1477" height="490" alt="Image" src="https://github.com/user-attachments/assets/5025362d-a772-4d91-9a91-85eefbfc6fd9" />
+
+<img width="1488" height="632" alt="Image" src="https://github.com/user-attachments/assets/1e6dbb1d-668b-4c05-b623-37ee40f059c3" />
+
 Inspeccionar el registro flotante:
 
 p $xmm0.v2_double
 
 Aquí les mostrás que el 29.4 entró por %xmm0.
+
+<img width="1488" height="632" alt="Image" src="https://github.com/user-attachments/assets/dd6846fb-f996-43ec-841a-3a4aaf23b050" />
 
 Ver el Stack antes del Prólogo:
 
@@ -176,6 +182,10 @@ Ver el Stack después del Prólogo:
 x/4gx $rsp
 
 Aquí les mostrás cómo el RBP viejo se guardó en el tope de la pila.
+
+<img width="1488" height="632" alt="Image" src="https://github.com/user-attachments/assets/50d72290-3ae3-4ef5-90d0-bb9fe51aee18" />
+
+
 ///////////////////////////
 Conceptos Clave para la Defensa
 El Stack Frame: Explicá que push rbp y mov rbp, rsp crean el marco de la función actual. El %rsp se mueve para hacer lugar (si hiciera falta) y el %rbp queda como base fija para acceder a variables.
