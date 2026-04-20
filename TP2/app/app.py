@@ -2,7 +2,7 @@ import requests # Se recomienda el uso de requests para API Rest [cite: 23, 75]
 import ctypes   # Se utiliza ctypes para extender Python con código de C [cite: 98, 107]
 
 # URL del Banco Mundial para el índice GINI de Argentina [cite: 23]
-url = "https://api.worldbank.org/v2/en/country/all/indicator/SI.POV.GINI?format=json&date=2011:2020&per_page=32500&page=1&country=%22Argentina%22"
+url = "https://api.worldbank.org/v2/en/country/ar/indicator/SI.POV.GINI?format=json&date=2011:2020"
 
 def recuperar_gini():
     """Recupera la información del Banco Mundial (Capa Superior)"""

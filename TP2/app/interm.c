@@ -11,7 +11,7 @@ long puente_python_asm(double valor_gini) {
     return resultado;
 }
 int main() {
-    double valor_test = 29.4;
+    double valor_test = 42.7;
     long res = puente_python_asm(valor_test);
     printf("Resultado: %ld\n", res);
     return 0;
