@@ -2,8 +2,7 @@
 import requests
 
 # URL proporcionada en el enunciado
-url = "https://api.worldbank.org/v2/en/country/all/indicator/SI.POV.GINI?format=json&date=2011:2020&per_page=32500&page=1&country=%22Argentina%22"
-
+url = "https://api.worldbank.org/v2/en/country/ar/indicator/SI.POV.GINI?format=json&date=2011:2020"
 def recuperar_gini():
     res = requests.get(url , timeout=10)
 
