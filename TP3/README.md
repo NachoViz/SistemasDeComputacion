@@ -267,3 +267,10 @@ Podés eliminar funciones que no usás y agregar las que quieras. Por ejemplo, p
 4. Limpieza del Intel ME
 Es la herramienta principal para usar scripts como me_cleaner. Con coreboot, podés indicarle al Intel Management Engine que se apague después de inicializar el hardware, quitándole ese "poder de espionaje" o control remoto que mencionábamos antes.
 
+Codigo rompiendose, pasando de modo protegido de vuelta a la bios por violación de permisos de escritura, ya que se intentó cargar el registro SS con un segmento de datos configurado como solo lectura:
+
+
+
+https://github.com/user-attachments/assets/923c4b43-d1c8-48af-930f-ae9663f3d81f
+
+
