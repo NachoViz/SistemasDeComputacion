@@ -98,7 +98,7 @@ clear_screen:
     mov $0x0720, %ax
 
 clear_loop:
-    mov %ax, %es:(%edi)   # usar ES (base 0)
+    mov %ax, %es:(%edi)   # usaso de es para base 0
     add $2, %edi
     loop clear_loop
     ret
