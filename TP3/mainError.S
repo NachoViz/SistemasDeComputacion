@@ -44,7 +44,7 @@ gdt_data:
     .word 0xffff
     .word 0x0000
     .byte 0x80
-    .byte 0x90      # 🔥 SOLO LECTURA
+    .byte 0x90     
     .byte 0xC7
     .byte 0x00
 
@@ -73,13 +73,12 @@ protected_mode:
 
     mov $0x7000, %esp
 
-    # 🔥 guardar GDTR en memoria baja
+    # guardar GDTR en memoria baja
     sgdt %es:gdtr_dump
 
     call clear_screen
     call print_message
 
-    # 🔥 provocar fallo
     call romper
 
 hang:
@@ -94,11 +93,9 @@ romper:
 
     mov $0x00000000, %edi
 
-    # 🔥 intento de escritura en READ ONLY
     movb $0x41, (%edi)
 
     ret
-
 
 # =========================================================
 # LIMPIAR PANTALLA
