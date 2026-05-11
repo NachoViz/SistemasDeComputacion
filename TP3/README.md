@@ -267,3 +267,14 @@ Podés eliminar funciones que no usás y agregar las que quieras. Por ejemplo, p
 4. Limpieza del Intel ME
 Es la herramienta principal para usar scripts como me_cleaner. Con coreboot, podés indicarle al Intel Management Engine que se apague después de inicializar el hardware, quitándole ese "poder de espionaje" o control remoto que mencionábamos antes.
 
+# GDB 
+
+Tire el comando 
+	
+	./run protected_mode debug
+
+Para verlo como el profe tiro en gdb
+	
+	source ~/.gdbinit
+
+
