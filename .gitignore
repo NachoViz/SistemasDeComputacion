@@ -11,3 +11,6 @@ env/
 # Archivos de configuración sensible
 .env
 *.log
+
+**/ghidra/*.zip
+**/uefi_security_lab/
