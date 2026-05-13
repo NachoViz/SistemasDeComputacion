@@ -1,0 +1,13 @@
+# Análisis y Laboratorios (Archivos pesados)
+uefi_security_lab/
+ghidra/
+
+# Entornos Virtuales de Python
+.venv/
+venv/
+env/
+.env/
+
+# Archivos de configuración sensible
+.env
+*.log
